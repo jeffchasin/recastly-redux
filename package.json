@@ -6,9 +6,10 @@
   "license": "UNLICENSED",
   "private": true,
   "scripts": {
-    "test": "live-server --open=./SpecRunner.html --port=8081",
-    "start": "live-server",
-    "compile": "webpack -d --watch"
+    "test": "live-server --wait=500 --open=./SpecRunner.html --port=8081",
+    "start": "live-server --wait=500",
+    "compile": "webpack -d --watch",
+    "startCompile": "webpack -d --watch | live-server --wait=500 --open=./SpecRunner.html --port=8081"
   },
   "dependencies": {
     "babel-core": "6.24.1",
@@ -22,6 +23,7 @@
     "react": "^15.6.1",
     "react-dom": "^15.4.2",
     "react-redux": "^5.0.6",
+    "react-test-renderer": "^16.4.2",
     "redux": "^3.6.0",
     "redux-thunk": "2.2.0",
     "thunk": "0.0.1"
