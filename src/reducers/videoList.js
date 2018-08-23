@@ -4,10 +4,11 @@ var videoListReducer = (state = [], action) => {
   //TODO: define a reducer for the videoList field of our state.
   switch (action.type) {
     case 'CHANGE_VIDEO_LIST':
-      return {
-        ...state,
-        videos: videos
-      }
+      return action.videos
+      // return {
+      //   ...state,
+      //   videos: videos
+      // }
     default:
       return state
   }
